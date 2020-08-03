@@ -41,6 +41,16 @@ data_driver = {
 }
 
 try:
-    print(data_driver['driver_list'][2]['jarak'])
+    print(f"Driver terdekat berjarak {data_driver['driver_list'][2]['jarak']} meter")
 except Exception as err:
     print('Error message : ', err)
+
+print("-" * 20)
+print("\n")
+
+# mendefinisikan fungsi
+def hitung_luas_segitiga(alas, tinggi):
+    luas_segitiga = alas * tinggi / 2
+    print(f"Luas segitiga dengan alas {alas} dan tinggi {tinggi} adalah {luas_segitiga}")
+
+hitung_luas_segitiga(10, 6)
