@@ -1,3 +1,10 @@
+# import cara 1
+from geometri.segitiga import hitung_luas_segitiga, info as info_segitiga
+from geometri.persegi import hitung_luas_persegi, info as info_persegi
+
+# import cara 2
+# import geometri.segitiga as gs
+
 # Percabangan
 is_fast = True
 
@@ -48,9 +55,10 @@ except Exception as err:
 print("-" * 20)
 print("\n")
 
-# mendefinisikan fungsi
-def hitung_luas_segitiga(alas, tinggi):
-    luas_segitiga = alas * tinggi / 2
-    print(f"Luas segitiga dengan alas {alas} dan tinggi {tinggi} adalah {luas_segitiga}")
-
+# hitung luas segitiga
+print(info_segitiga())
 hitung_luas_segitiga(10, 6)
+
+# hitung luas persegi
+print(info_persegi())
+hitung_luas_persegi(10, 6)
