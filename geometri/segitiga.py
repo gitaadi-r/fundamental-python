@@ -1,8 +1,14 @@
-# info
-def info():
-    return 'Modul menghitung luas segitiga'
+from geometri.bangun_ruang import BangunRuang
 
-# mendefinisikan fungsi
-def hitung_luas_segitiga(alas, tinggi):
-    luas_segitiga = alas * tinggi / 2
-    print(f"Luas segitiga dengan alas {alas} dan tinggi {tinggi} adalah {luas_segitiga}")
+
+class Segitiga(BangunRuang):
+
+    def __init__(self, alas, tinggi):
+        self.alas = alas
+        self.tinggi = tinggi
+
+    def info(self):
+        return f"Ini adalah objek segitiga dengan alas {self.alas} dan tinggi {self.tinggi}"
+
+    def hitung_luas(self):
+        return self.alas * self.tinggi / 2

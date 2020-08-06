@@ -1,8 +1,14 @@
-# info
-def info():
-    return 'Modul menghitung luas persegi'
+from geometri.bangun_ruang import BangunRuang
 
-# mendefinisikan fungsi hitung luas persegi panjang
-def hitung_luas_persegi(panjang, lebar):
-    luas_persegi = panjang * lebar
-    print(f"Luas persegi dengan alas {panjang} dan tinggi {lebar} adalah {luas_persegi}")
+
+class PersegiPanjang(BangunRuang):
+
+    def __init__(self, p, l):
+        self.p = p
+        self.l = l
+
+    def info(self):
+        return f"Ini adalah objek dari persegi panjang dengan panjang {self.p} dan lebar {self.l}"
+
+    def hitung_luas(self):
+        return self.p * self.l
